@@ -1,0 +1,84 @@
+/* =============================
+SECTION
+============================= */
+
+.section {
+  background: #f5f5f5;
+  padding: 90px 20px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* =============================
+TITLE
+============================= */
+
+.title {
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: #111;
+  max-width: 800px;
+}
+
+.description {
+  margin-top: 18px;
+  max-width: 720px;
+  line-height: 1.7;
+  color: #444;
+}
+
+/* =============================
+GRID
+============================= */
+
+.grid {
+  margin-top: 50px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px 60px;
+}
+
+/* =============================
+SERVICE
+============================= */
+
+.service {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+}
+
+.icon {
+  color: #5b6cff;
+  flex-shrink: 0;
+}
+
+.service h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.service p {
+  line-height: 1.6;
+  color: #444;
+}
+
+/* =============================
+RESPONSIVE
+============================= */
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+}

@@ -1,0 +1,114 @@
+/* ================= SECTION ================= */
+
+.section {
+  background: #f5f5f5;
+  padding: 90px 20px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ================= TITLE ================= */
+
+.title {
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: #111;
+  max-width: 800px;
+}
+
+.description {
+  margin-top: 20px;
+  max-width: 720px;
+  line-height: 1.7;
+  color: #444;
+}
+
+/* ================= GRID ================= */
+
+.grid {
+  margin-top: 60px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 35px;
+}
+
+/* ================= CARD ================= */
+
+.card {
+  position: relative;
+
+  background: #fff;
+  padding: 40px 30px;
+
+  border-radius: 8px;
+  border: 1px solid #d6d6e0;
+}
+
+/* linea superior */
+
+.line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+
+  background: #5b5bd6;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+/* círculo */
+
+.circle {
+  position: absolute;
+
+  top: -22px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  width: 44px;
+  height: 44px;
+
+  background: #5b5bd6;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  font-weight: 600;
+}
+
+/* contenido */
+
+.card h3 {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.card p {
+  margin-top: 10px;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+}

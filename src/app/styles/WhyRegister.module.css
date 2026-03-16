@@ -1,0 +1,107 @@
+/* =============================
+SECTION
+============================= */
+
+.section {
+  background: #f3f3f3;
+  padding: 90px 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* =============================
+TITLE
+============================= */
+
+.title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #000;
+}
+
+.description {
+  margin-top: 18px;
+  max-width: 850px;
+  margin-left: auto;
+  margin-right: auto;
+
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #444;
+}
+
+/* =============================
+CARDS GRID
+============================= */
+
+.cards {
+  margin-top: 50px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+/* =============================
+CARD
+============================= */
+
+.card {
+  background: #bfc3d9;
+  padding: 28px;
+
+  border-radius: 8px;
+
+  text-align: left;
+
+  border: 1px solid rgba(0, 0, 0, 0.08);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.card h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #222;
+}
+
+.card p {
+  margin-top: 12px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* =============================
+RESPONSIVE
+============================= */
+
+@media (max-width: 1000px) {
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+}

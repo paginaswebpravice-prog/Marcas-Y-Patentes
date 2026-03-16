@@ -1,0 +1,93 @@
+.section {
+  background: linear-gradient(180deg, #3a00ff, #2a00d6);
+  color: white;
+  padding: 100px 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.title {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.description {
+  max-width: 900px;
+  margin-bottom: 60px;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+/* CARDS */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-bottom: 80px;
+}
+
+.card {
+  background: #e7e7ef;
+  color: #222;
+  padding: 30px;
+  border-radius: 12px;
+}
+
+.icon {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+/* STATS */
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+  text-align: center;
+}
+
+.stat h4 {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.stat p {
+  opacity: 0.9;
+  margin-top: 10px;
+}
+
+/* CIRCULOS */
+
+.circle80,
+.circle95,
+.circleFull {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  margin: auto;
+  font-size: 34px;
+  font-weight: 700;
+  color: white;
+}
+
+/* PROGRESS */
+
+.circle80 {
+  background: conic-gradient(#aab0ff 0 80%, #4c4cff 80% 100%);
+}
+
+.circle95 {
+  background: conic-gradient(#aab0ff 0 95%, #4c4cff 95% 100%);
+}
+
+.circleFull {
+  background: conic-gradient(#aab0ff 0 100%);
+}
