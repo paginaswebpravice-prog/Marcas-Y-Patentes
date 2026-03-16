@@ -3,7 +3,7 @@ SECTION
 ============================= */
 
 .section {
-  background: #f3f3f3;
+  background: #ffffff;
   padding: 90px 20px;
 }
 
@@ -20,7 +20,7 @@ TITLE
 .title {
   font-size: 2.4rem;
   font-weight: 700;
-  color: #000;
+  color: #004a80;
 }
 
 .description {
@@ -31,7 +31,7 @@ TITLE
 
   font-size: 1.1rem;
   line-height: 1.7;
-  color: #444;
+  color: #333;
 }
 
 /* =============================
@@ -51,35 +51,60 @@ CARD
 ============================= */
 
 .card {
-  background: #bfc3d9;
-  padding: 28px;
+  background: #ffffff;
 
-  border-radius: 8px;
+  padding: 30px;
+
+  border-radius: 10px;
 
   text-align: left;
 
-  border: 1px solid rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 74, 128, 0.12);
 
   transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
 }
 
 .card h3 {
   font-size: 1.25rem;
   font-weight: 700;
-  color: #222;
+  color: #004a80;
 }
 
 .card p {
   margin-top: 12px;
   line-height: 1.6;
-  color: #333;
+  color: #444;
 }
 
+/* HOVER */
+
 .card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+  transform: translateY(-6px);
+
+  border-color: #f7c600;
+
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.08);
+}
+
+/* =============================
+ACCENT LINE (detalle elegante)
+============================= */
+
+.card::before {
+  content: "";
+  display: block;
+
+  width: 40px;
+  height: 4px;
+
+  background: #f7c600;
+
+  margin-bottom: 14px;
+
+  border-radius: 2px;
 }
 
 /* =============================

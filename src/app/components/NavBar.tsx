@@ -19,8 +19,6 @@ export default function NavBar() {
     { name: "Servicios", id: "services" },
     { name: "Proceso", id: "process" },
     { name: "Experiencia", id: "experience" },
-    { name: "Casos", id: "success-cases" },
-    { name: "Inversión", id: "investment" },
   ];
 
   const handleScroll = (id: string) => {
@@ -86,12 +84,15 @@ export default function NavBar() {
                 </button>
               </li>
             ))}
+            <li>
+              <button>Blog</button>
+            </li>
           </ul>
 
           {/* CTA */}
 
           <button className={styles.ctaButton} onClick={handleClick}>
-            PROGRAME UNA CONSULTA
+            VER MI CASO
           </button>
 
           {/* HAMBURGER */}

@@ -27,7 +27,7 @@ const data = [
 
 export default function Experience() {
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id="experience">
       <div className={styles.container}>
         <h2 className={styles.title}>
           Experiencia que Marca la Diferencia: Tu Seguridad Jurídica en Colombia

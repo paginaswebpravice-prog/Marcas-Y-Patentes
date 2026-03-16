@@ -27,7 +27,7 @@ const steps = [
 
 export default function Process() {
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id="process">
       <div className={styles.container}>
         <h2 className={styles.title}>
           El Proceso Simplificado: De la Idea a la Protección en Colombia

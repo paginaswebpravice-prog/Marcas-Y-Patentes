@@ -10,7 +10,8 @@
 
 .content {
   padding: 5rem 4rem;
-  background: #f3f4f6;
+
+  background: #ffffff;
 
   display: flex;
   flex-direction: column;
@@ -23,14 +24,17 @@
   font-size: 3rem;
   line-height: 1.15;
   font-weight: 700;
-  color: #000;
+
+  color: #004a80;
 }
 
 .content p {
   margin-top: 1.5rem;
+
   font-size: 1.1rem;
   line-height: 1.7;
-  color: #444;
+
+  color: #333;
 }
 
 /* ======================
@@ -43,33 +47,55 @@
   gap: 1rem;
 }
 
+/* BOTÓN PRINCIPAL */
+
 .primary {
-  background: #4f5bd5;
-  color: white;
+  background: #f7c600;
+  color: #000;
+
   border: none;
+
   padding: 0.9rem 1.6rem;
+
   border-radius: 6px;
-  font-weight: 600;
+
+  font-weight: 700;
+
   cursor: pointer;
+
+  transition: all 0.3s ease;
+
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
 }
 
 .primary:hover {
-  opacity: 0.9;
+  background: #c4911a;
+  transform: translateY(-2px);
 }
+
+/* BOTÓN SECUNDARIO */
 
 .secondary {
   background: transparent;
-  border: 1px solid #4f5bd5;
-  color: #4f5bd5;
+
+  border: 2px solid #004a80;
+
+  color: #004a80;
+
   padding: 0.9rem 1.6rem;
+
   border-radius: 6px;
+
   font-weight: 600;
+
   cursor: pointer;
+
+  transition: all 0.3s ease;
 }
 
 .secondary:hover {
-  background: #4f5bd5;
-  color: white;
+  background: #004a80;
+  color: #ffffff;
 }
 
 /* ======================

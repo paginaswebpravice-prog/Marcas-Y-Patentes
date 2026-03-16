@@ -1,6 +1,6 @@
 .section {
-  background: linear-gradient(180deg, #3a00ff, #2a00d6);
-  color: white;
+  background: linear-gradient(180deg, #004a80, #2f6f9c);
+  color: #ffffff;
   padding: 100px 20px;
 }
 
@@ -19,7 +19,7 @@
   max-width: 900px;
   margin-bottom: 60px;
   line-height: 1.6;
-  opacity: 0.9;
+  opacity: 0.95;
 }
 
 /* CARDS */
@@ -32,15 +32,30 @@
 }
 
 .card {
-  background: #e7e7ef;
-  color: #222;
+  background: #ffffff;
+  color: #000;
+
   padding: 30px;
   border-radius: 12px;
+
+  border: 1px solid rgba(0, 74, 128, 0.12);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: #f7c600;
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.12);
 }
 
 .icon {
   font-size: 28px;
   margin-bottom: 10px;
+  color: #004a80;
 }
 
 /* STATS */
@@ -69,25 +84,34 @@
 .circleFull {
   width: 180px;
   height: 180px;
+
   border-radius: 50%;
+
   display: grid;
   place-items: center;
+
   margin: auto;
+
   font-size: 34px;
   font-weight: 700;
-  color: white;
+
+  color: #000;
+
+  background: #ffffff;
+
+  border: 6px solid #f7c600;
 }
 
 /* PROGRESS */
 
 .circle80 {
-  background: conic-gradient(#aab0ff 0 80%, #4c4cff 80% 100%);
+  background: conic-gradient(#f7c600 0 80%, #ffffff 80% 100%);
 }
 
 .circle95 {
-  background: conic-gradient(#aab0ff 0 95%, #4c4cff 95% 100%);
+  background: conic-gradient(#f7c600 0 95%, #ffffff 95% 100%);
 }
 
 .circleFull {
-  background: conic-gradient(#aab0ff 0 100%);
+  background: conic-gradient(#f7c600 0 100%);
 }

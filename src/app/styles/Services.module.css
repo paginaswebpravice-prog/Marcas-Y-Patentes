@@ -3,7 +3,7 @@ SECTION
 ============================= */
 
 .section {
-  background: #f5f5f5;
+  background: #ffffff;
   padding: 90px 20px;
 }
 
@@ -19,15 +19,18 @@ TITLE
 .title {
   font-size: 2.3rem;
   font-weight: 700;
-  color: #111;
+
+  color: #004a80;
+
   max-width: 800px;
 }
 
 .description {
   margin-top: 18px;
   max-width: 720px;
+
   line-height: 1.7;
-  color: #444;
+  color: #333;
 }
 
 /* =============================
@@ -50,22 +53,53 @@ SERVICE
   display: flex;
   gap: 18px;
   align-items: flex-start;
+
+  padding: 18px 20px;
+
+  border-radius: 8px;
+
+  transition: background 0.25s ease;
+}
+
+.service:hover {
+  background: rgba(0, 74, 128, 0.05);
 }
 
 .icon {
-  color: #5b6cff;
+  color: #004a80;
   flex-shrink: 0;
+
+  margin-top: 3px;
 }
 
 .service h3 {
   font-size: 1.2rem;
-  font-weight: 600;
+  font-weight: 700;
+
   margin-bottom: 6px;
+
+  color: #000;
 }
 
 .service p {
   line-height: 1.6;
   color: #444;
+}
+
+/* =============================
+ACCENT LINE
+============================= */
+
+.service::before {
+  content: "";
+  width: 4px;
+  height: 100%;
+
+  background: #f7c600;
+
+  border-radius: 2px;
+
+  margin-right: 10px;
 }
 
 /* =============================

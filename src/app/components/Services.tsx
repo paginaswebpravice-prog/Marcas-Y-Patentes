@@ -15,7 +15,7 @@ import {
 
 export default function Services() {
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id="services">
       <div className={styles.container}>
         <h2 className={styles.title}>
           Nuestros Servicios Integrales para tu Propiedad Intelectual en

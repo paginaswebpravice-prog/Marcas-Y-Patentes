@@ -3,9 +3,9 @@
 .section {
   padding: 90px 20px;
 
-  background: linear-gradient(135deg, #3b1dff, #2c0bff);
+  background: linear-gradient(135deg, #004a80, #2f6f9c);
 
-  color: white;
+  color: #ffffff;
 }
 
 .container {
@@ -43,6 +43,7 @@
 .step h3 {
   margin-top: 20px;
   font-size: 1.3rem;
+  color: #ffffff;
 }
 
 .step p {
@@ -58,17 +59,23 @@
 
   height: 50px;
 
-  background: #c9c9d6;
-  color: black;
+  background: #f7c600;
+  color: #000;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  font-weight: 600;
+  font-weight: 700;
   font-size: 20px;
 
   clip-path: polygon(0% 0%, 92% 0%, 100% 50%, 92% 100%, 0% 100%, 4% 50%);
+
+  transition: background 0.25s ease;
+}
+
+.arrow:hover {
+  background: #c4911a;
 }
 
 /* ================= RESPONSIVE ================= */
