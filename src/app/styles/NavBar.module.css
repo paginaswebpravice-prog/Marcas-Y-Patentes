@@ -12,7 +12,7 @@
 .topbar {
   background: linear-gradient(135deg, #003d6b, #004a80);
   color: white;
-  font-size: 13px;
+  font-size: 14px;
 }
 
 .topbarContainer {
@@ -39,6 +39,7 @@
 .topRight {
   display: flex;
   gap: 14px;
+  font-size: 20px;
 }
 
 .topRight svg {
@@ -62,6 +63,11 @@
   border-bottom: 1px solid #eeeeee;
 
   transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+  height: 70px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
 }
 
 /* ================= CONTENEDOR ================= */

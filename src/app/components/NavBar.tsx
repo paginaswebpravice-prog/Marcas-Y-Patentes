@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "../styles/NavBar.module.css";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -13,6 +13,7 @@ import {
 
 export default function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   const sections = [
     { name: "Inicio", id: "hero" },
@@ -21,7 +22,20 @@ export default function NavBar() {
     { name: "Experiencia", id: "experience" },
   ];
 
-  const handleScroll = (id: string) => {
+  /* ================= SCROLL NAVBAR ================= */
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  /* ================= SCROLL SECTIONS ================= */
+
+  const handleScrollTo = (id: string) => {
     const section = document.getElementById(id);
 
     if (section) {
@@ -34,13 +48,15 @@ export default function NavBar() {
     setMenuOpen(false);
   };
 
-  const handleClick = () => {
+  const handleContact = () => {
     const section = document.getElementById("contact");
 
     section?.scrollIntoView({
       behavior: "smooth",
     });
   };
+
+  /* ================= COMPONENT ================= */
 
   return (
     <header className={styles.header}>
@@ -68,35 +84,40 @@ export default function NavBar() {
 
       {/* ================= NAVBAR ================= */}
 
-      <div className={styles.navbar}>
+      <div className={`${styles.navbar} ${scrolled ? styles.scrolled : ""}`}>
         <nav className={styles.container}>
+          {/* LOGO */}
           <div className={styles.logo}>
-            <Image src="/logo.png" alt="logo" width={75} height={70} priority />
+            <Image
+              src="/logo.png"
+              alt="Firma de abogados en Bogotá"
+              width={75}
+              height={70}
+              priority
+            />
           </div>
 
           {/* LINKS */}
-
           <ul className={`${styles.links} ${menuOpen ? styles.active : ""}`}>
             {sections.map((section) => (
               <li key={section.id}>
-                <button onClick={() => handleScroll(section.id)}>
+                <button onClick={() => handleScrollTo(section.id)}>
                   {section.name}
                 </button>
               </li>
             ))}
+
             <li>
               <button>Blog</button>
             </li>
           </ul>
 
           {/* CTA */}
-
-          <button className={styles.ctaButton} onClick={handleClick}>
-            VER MI CASO
+          <button className={styles.ctaButton} onClick={handleContact}>
+            Ver mi caso
           </button>
 
           {/* HAMBURGER */}
-
           <div
             className={styles.hamburger}
             onClick={() => setMenuOpen(!menuOpen)}
