@@ -9,6 +9,7 @@ import {
   faFacebook,
   faLinkedin,
   faInstagram,
+  faTiktok,
 } from "@fortawesome/free-brands-svg-icons";
 
 export default function NavBar() {
@@ -75,9 +76,38 @@ export default function NavBar() {
           </div>
 
           <div className={styles.topRight}>
-            <FontAwesomeIcon icon={faFacebook} />
-            <FontAwesomeIcon icon={faInstagram} />
-            <FontAwesomeIcon icon={faLinkedin} />
+            <a
+              href="https://www.instagram.com/pravice_abogados/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook de Pravice Abogados"
+            >
+              <FontAwesomeIcon icon={faFacebook} />
+            </a>
+            <a
+              href="https://www.instagram.com/pravice_abogados/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram de Pravice Abogados"
+            >
+              <FontAwesomeIcon icon={faInstagram} />
+            </a>
+            <a
+              href="https://co.linkedin.com/company/praviceabogadosespecializados"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn de Pravice Abogados"
+            >
+              <FontAwesomeIcon icon={faLinkedin} />
+            </a>
+            <a
+              href="https://www.tiktok.com/@pravice_abogados"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="TikTok de Pravice Abogados"
+            >
+              <FontAwesomeIcon icon={faTiktok} />
+            </a>
           </div>
         </div>
       </div>
@@ -89,10 +119,10 @@ export default function NavBar() {
           {/* LOGO */}
           <div className={styles.logo}>
             <Image
-              src="/logo.png"
+              src="/logo_pravice.png"
               alt="Firma de abogados en Bogotá"
               width={75}
-              height={70}
+              height={75}
               priority
             />
           </div>
