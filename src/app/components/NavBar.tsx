@@ -76,7 +76,7 @@ export default function NavBar() {
         <div className={styles.topbarContainer}>
           <div className={styles.topLeft}>
             <span>
-              <FontAwesomeIcon icon={faPhone} /> +57 300 000 0000
+              <FontAwesomeIcon icon={faPhone} /> (601) 3099331
             </span>
 
             <span>
@@ -86,7 +86,7 @@ export default function NavBar() {
 
           <div className={styles.topRight}>
             <a
-              href="https://www.facebook.com/"
+              href="https://www.facebook.com/praviceabogadosespecializados"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook"

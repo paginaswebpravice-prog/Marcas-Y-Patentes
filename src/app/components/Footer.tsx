@@ -21,29 +21,42 @@ export default function Footer() {
           <h2>Información de Contacto</h2>
 
           <p>
-            <FontAwesomeIcon icon={faPhone} /> Teléfono: +57 300 000 0000
+            <FontAwesomeIcon icon={faPhone} /> Teléfono: (601) 3099331
           </p>
           <p>
-            <FontAwesomeIcon icon={faEnvelope} /> Email: contacto@pravice.com
+            <FontAwesomeIcon icon={faEnvelope} /> Email:
+            info.pravice@abogadosespecialistas.com.co
           </p>
           <p>
             <FontAwesomeIcon icon={faLocationDot} /> Bogotá, Colombia
           </p>
           <p>
-            <FontAwesomeIcon icon={faClock} /> Lunes a Viernes, 9:00 - 18:00
+            <FontAwesomeIcon icon={faClock} /> Lunes a Viernes, 8:00am - 6:00pm
           </p>
 
           <div className={styles.socials}>
-            <a href="#" target="_blank">
+            <a
+              href="https://www.facebook.com/praviceabogadosespecializados"
+              target="_blank"
+            >
               <FontAwesomeIcon icon={faFacebook} />
             </a>
-            <a href="#" target="_blank">
+            <a
+              href="https://co.linkedin.com/company/praviceabogadosespecializados"
+              target="_blank"
+            >
               <FontAwesomeIcon icon={faLinkedinIn} />
             </a>
-            <a href="#" target="_blank">
+            <a
+              href="https://www.instagram.com/pravice_abogados/"
+              target="_blank"
+            >
               <FontAwesomeIcon icon={faInstagram} />
             </a>
-            <a href="https://wa.me/573000000000" target="_blank">
+            <a
+              href="https://api.whatsapp.com/message/RE7FEN4IGOISD1?autoload=1&app_absent=0"
+              target="_blank"
+            >
               <FontAwesomeIcon icon={faWhatsapp} />
             </a>
           </div>
