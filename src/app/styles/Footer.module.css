@@ -1,0 +1,160 @@
+/* ================= FOOTER ================= */
+
+.footer {
+  background: #f5f7fa;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+
+/* ================= LEFT BOX ================= */
+
+.contactBox {
+  background: linear-gradient(135deg, #004a80, #003a66);
+  color: #fff;
+  padding: 40px;
+  border-radius: 16px;
+}
+
+.contactBox h2 {
+  margin-bottom: 20px;
+}
+
+.contactBox p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  font-size: 15px;
+}
+
+/* ================= SOCIALS ================= */
+
+.socials {
+  margin-top: 25px;
+  display: flex;
+  gap: 15px;
+}
+
+.socials a {
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.socials a:hover {
+  background: #f7c600;
+  color: #000;
+  transform: translateY(-4px);
+}
+
+/* ================= RIGHT BOX ================= */
+
+.formBox h2 {
+  margin-bottom: 15px;
+  color: #000;
+}
+
+.formBox p {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.formBox ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 25px;
+}
+
+.formBox li {
+  margin-bottom: 10px;
+  color: #000;
+}
+
+/* ================= BUTTON ================= */
+
+.button {
+  background: #004a80;
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background: #f7c600;
+  color: #000;
+}
+
+/* ================= SUB FOOTER ================= */
+
+.subFooter {
+  margin-top: 60px;
+  padding: 25px 20px;
+  background: #002844;
+  color: #ffffff;
+}
+
+.subContainer {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+/* TEXTO */
+
+.subContainer p {
+  font-size: 14px;
+  color: #d6e6f2;
+}
+
+/* LINKS LEGALES */
+
+.legalLinks {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.legalLinks a {
+  font-size: 14px;
+  color: #d6e6f2;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.legalLinks a:hover {
+  color: #f7c600;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .subContainer {
+    flex-direction: column;
+    text-align: center;
+  }
+}

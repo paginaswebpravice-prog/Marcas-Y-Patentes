@@ -11,10 +11,15 @@ import {
   faInstagram,
   faTiktok,
 } from "@fortawesome/free-brands-svg-icons";
+import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
 
 export default function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+
+  const pathname = usePathname();
+  const router = useRouter();
 
   const sections = [
     { name: "Inicio", id: "hero" },
@@ -34,27 +39,32 @@ export default function NavBar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  /* ================= SCROLL SECTIONS ================= */
+  /* ================= NAVIGATION HYBRID ================= */
 
-  const handleScrollTo = (id: string) => {
-    const section = document.getElementById(id);
+  const handleNavigation = (id: string) => {
+    if (pathname === "/") {
+      const section = document.getElementById(id);
 
-    if (section) {
-      section.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
+      if (section) {
+        section.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+    } else {
+      router.push(`/#${id}`);
     }
 
     setMenuOpen(false);
   };
 
   const handleContact = () => {
-    const section = document.getElementById("contact");
-
-    section?.scrollIntoView({
-      behavior: "smooth",
-    });
+    if (pathname === "/") {
+      const section = document.getElementById("contact");
+      section?.scrollIntoView({ behavior: "smooth" });
+    } else {
+      router.push("/#contact");
+    }
   };
 
   /* ================= COMPONENT ================= */
@@ -62,7 +72,6 @@ export default function NavBar() {
   return (
     <header className={styles.header}>
       {/* ================= TOPBAR ================= */}
-
       <div className={styles.topbar}>
         <div className={styles.topbarContainer}>
           <div className={styles.topLeft}>
@@ -77,34 +86,37 @@ export default function NavBar() {
 
           <div className={styles.topRight}>
             <a
-              href="https://www.instagram.com/pravice_abogados/"
+              href="https://www.facebook.com/"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Facebook de Pravice Abogados"
+              aria-label="Facebook"
             >
               <FontAwesomeIcon icon={faFacebook} />
             </a>
+
             <a
               href="https://www.instagram.com/pravice_abogados/"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Instagram de Pravice Abogados"
+              aria-label="Instagram"
             >
               <FontAwesomeIcon icon={faInstagram} />
             </a>
+
             <a
               href="https://co.linkedin.com/company/praviceabogadosespecializados"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="LinkedIn de Pravice Abogados"
+              aria-label="LinkedIn"
             >
               <FontAwesomeIcon icon={faLinkedin} />
             </a>
+
             <a
               href="https://www.tiktok.com/@pravice_abogados"
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="TikTok de Pravice Abogados"
+              aria-label="TikTok"
             >
               <FontAwesomeIcon icon={faTiktok} />
             </a>
@@ -113,32 +125,36 @@ export default function NavBar() {
       </div>
 
       {/* ================= NAVBAR ================= */}
-
       <div className={`${styles.navbar} ${scrolled ? styles.scrolled : ""}`}>
         <nav className={styles.container}>
           {/* LOGO */}
           <div className={styles.logo}>
-            <Image
-              src="/logo_pravice.png"
-              alt="Firma de abogados en Bogotá"
-              width={75}
-              height={75}
-              priority
-            />
+            <Link href="/">
+              <Image
+                src="/logo_pravice.png"
+                alt="Firma de abogados en Bogotá"
+                width={70}
+                height={70}
+                priority
+              />
+            </Link>
           </div>
 
           {/* LINKS */}
           <ul className={`${styles.links} ${menuOpen ? styles.active : ""}`}>
             {sections.map((section) => (
               <li key={section.id}>
-                <button onClick={() => handleScrollTo(section.id)}>
+                <button onClick={() => handleNavigation(section.id)}>
                   {section.name}
                 </button>
               </li>
             ))}
 
+            {/* BLOG COMO RUTA */}
             <li>
-              <button>Blog</button>
+              <Link href="/blog" onClick={() => setMenuOpen(false)}>
+                Blog
+              </Link>
             </li>
           </ul>
 

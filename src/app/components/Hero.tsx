@@ -36,7 +36,7 @@ export default function Hero() {
       {/* RIGHT IMAGE */}
       <div className={styles.imageContainer}>
         <Image
-          src="/hero-law.jpg"
+          src="/marcas&patentes.jpg"
           alt="Oficina legal moderna"
           fill
           priority

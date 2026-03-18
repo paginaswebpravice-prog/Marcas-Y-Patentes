@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import NavBar from "./components/NavBar";
+import Footer from "./components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,7 +33,7 @@ export const metadata: Metadata = {
   authors: [{ name: "Pravice Abogados" }],
   creator: "Pravice Abogados",
 
-  metadataBase: new URL(""),
+  metadataBase: new URL("https://marcasypatentespravice.com"),
 
   openGraph: {
     title: "Abogados en Marcas y Patentes en Colombia | Pravice",
@@ -62,6 +63,7 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <NavBar />
         {children}
+        <Footer />
       </body>
     </html>
   );
