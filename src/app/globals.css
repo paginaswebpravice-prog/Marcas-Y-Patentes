@@ -35,6 +35,11 @@ a {
   text-decoration: none;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

@@ -1,0 +1,121 @@
+.section {
+  padding: 140px 20px;
+  background: #ffffff; /* limpio y profesional */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ================= TITLE ================= */
+.title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #004a80; /* azul principal */
+}
+
+.description {
+  font-size: 16px;
+  margin-bottom: 40px;
+  color: #000; /* texto fuerte */
+}
+
+/* ================= GRID ================= */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* ================= CARD ================= */
+.card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 16px;
+  text-decoration: none;
+  color: inherit;
+  transition: 0.3s ease;
+  border: 1px solid rgba(0, 74, 128, 0.15);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 74, 128, 0.15);
+  border-color: #004a80;
+}
+
+/* línea superior tipo acento */
+.card::before {
+  content: "";
+  display: block;
+  height: 4px;
+  width: 40px;
+  background: #f7c600;
+  margin-bottom: 12px;
+  border-radius: 4px;
+}
+
+.card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #004a80;
+}
+
+.card p {
+  font-size: 14px;
+  color: #000;
+  opacity: 0.8;
+}
+
+/* ================= CTA ================= */
+.readMore {
+  display: inline-block;
+  margin-top: 15px;
+  font-weight: 600;
+  color: #c4911a;
+  transition: 0.3s;
+}
+
+.readMore:hover {
+  color: #f7c600;
+}
+
+/* ================= FAQ ================= */
+.faq {
+  margin-top: 80px;
+}
+
+.faqTitle {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #004a80;
+}
+
+/* FAQ ITEMS */
+.faqItem {
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 12px;
+  background: #ffffff;
+  border: 1px solid rgba(0, 74, 128, 0.15);
+  transition: 0.3s;
+}
+
+.faqItem:hover {
+  border-color: #004a80;
+  box-shadow: 0 8px 20px rgba(0, 74, 128, 0.1);
+}
+
+.faqItem h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #004a80;
+}
+
+.faqItem p {
+  font-size: 14px;
+  color: #000;
+  opacity: 0.85;
+}
