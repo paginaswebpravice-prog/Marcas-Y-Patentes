@@ -5,86 +5,112 @@ import styles from "../styles/SuccessCases.module.css";
 
 export default function SuccessCases() {
   return (
-    <section className={styles.section}>
+    <section
+      className={styles.section}
+      itemScope
+      itemType="https://schema.org/LegalService"
+    >
+      {/* SEO HIDDEN */}
+      <div style={{ display: "none" }}>
+        <h2 itemProp="name">
+          Casos de éxito en registro de marcas en Bogotá Colombia
+        </h2>
+        <p itemProp="description">
+          Experiencia comprobada en registro de marcas, patentes y diseños
+          industriales en Colombia ante la SIC para empresas en Bogotá.
+        </p>
+        <span itemProp="areaServed">Bogotá, Colombia</span>
+      </div>
+
       <div className={styles.container}>
         <h2 className={styles.title}>
-          Casos de Éxito: Protegiendo la Innovación en Colombia
+          Casos de Éxito en Registro de Marcas y Patentes en Bogotá, Colombia
         </h2>
 
         <p className={styles.description}>
-          Cada proyecto de nuestros clientes en Bogotá y el resto del país es
-          una historia de esfuerzo y creatividad. Nuestra misión es garantizar
-          que esa historia cuente con el respaldo legal ante la Superintendencia
-          de Industria y Comercio (SIC) y los sistemas internacionales como el
-          PCT o el Sistema de Madrid.
+          Hemos acompañado a emprendedores, startups y empresas en Bogotá y toda
+          Colombia en la protección legal de sus marcas, patentes y diseños
+          industriales ante la Superintendencia de Industria y Comercio (SIC),
+          asegurando resultados sólidos en el mercado nacional.
         </p>
 
         <div className={styles.grid}>
           {/* ITEM 1 */}
-          <div className={styles.card}>
+          <div
+            className={styles.card}
+            itemScope
+            itemType="https://schema.org/CreativeWork"
+          >
             <div className={styles.icon}>
               <Image
                 src="/icons/marcas.jpg"
-                alt="Registro de marcas"
+                alt="Registro de marca en Bogotá Colombia"
                 width={60}
                 height={60}
               />
             </div>
 
             <div>
-              <h3>Marcas que Conquistan el Mercado Colombiano</h3>
+              <h3 itemProp="name">Registro de Marcas Exitoso en Bogotá</h3>
 
-              <p>
-                Ayudamos a emprendedores bogotanos y PYMEs colombianas a
-                asegurar su identidad ante la SIC, obteniendo exclusividad y
-                reconocimiento sólido para competir en el mercado nacional y
-                latinoamericano.
+              <p itemProp="description">
+                Asesoramos a empresas en Bogotá y Colombia en el registro de
+                marcas ante la SIC, logrando exclusividad legal y
+                posicionamiento competitivo en el mercado colombiano.
               </p>
             </div>
           </div>
 
           {/* ITEM 2 */}
-          <div className={styles.card}>
+          <div
+            className={styles.card}
+            itemScope
+            itemType="https://schema.org/CreativeWork"
+          >
             <div className={styles.icon}>
               <Image
                 src="/icons/patentes.jpg"
-                alt="Registro de patentes"
+                alt="Registro de patentes en Colombia"
                 width={60}
                 height={60}
               />
             </div>
 
             <div>
-              <h3>Patentes que Impulsan el Futuro del País</h3>
+              <h3 itemProp="name">Patentes Gestionadas en Colombia</h3>
 
-              <p>
-                Protegemos invenciones disruptivas desde nuestra sede en Bogotá,
-                gestionando registros ante la SIC y brindando acompañamiento
-                estratégico en solicitudes internacionales vía OMPI para
-                asegurar el beneficio del innovador.
+              <p itemProp="description">
+                Protegemos innovaciones desde Bogotá mediante solicitudes de
+                patentes ante la SIC en Colombia, garantizando seguridad
+                jurídica para inventores y empresas tecnológicas.
               </p>
             </div>
           </div>
 
           {/* ITEM 3 */}
-          <div className={styles.card}>
+          <div
+            className={styles.card}
+            itemScope
+            itemType="https://schema.org/CreativeWork"
+          >
             <div className={styles.icon}>
               <Image
                 src="/icons/disenos.jpg"
-                alt="Diseños industriales"
+                alt="Diseños industriales en Colombia"
                 width={60}
                 height={60}
               />
             </div>
 
             <div>
-              <h3>Diseños Industriales con Sello Local</h3>
+              <h3 itemProp="name">
+                Protección de Diseños Industriales en Colombia
+              </h3>
 
-              <p>
-                Salvaguardamos la creatividad y estética de productos
-                colombianos innovadores frente a copias no autorizadas,
-                garantizando que su valor único prevalezca en el entorno
-                comercial del país.
+              <p itemProp="description">
+                Defendemos la identidad visual de productos en el mercado
+                colombiano, asegurando su registro y protección legal frente a
+                imitaciones.
               </p>
             </div>
           </div>

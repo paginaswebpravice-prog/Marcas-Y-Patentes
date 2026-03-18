@@ -5,50 +5,80 @@ import styles from "../styles/Experience.module.css";
 const data = [
   {
     number: 1,
-    title: "Más de 130 Años de Experiencia",
-    text: "Referentes desde 1891, con presencia y reconocimiento global en propiedad industrial y apoyo al emprendedor bogotano.",
+    title: "Experiencia en Propiedad Intelectual en Colombia",
+    text: "Más de un siglo de experiencia en registro de marcas y patentes en Colombia, apoyando empresas y emprendedores en Bogotá con soluciones legales efectivas.",
   },
   {
     number: 2,
-    title: "Equipo de Expertos ante la SIC",
-    text: "Abogados y especialistas certificados en propiedad industrial ante la Superintendencia de Industria y Comercio (SIC) y organismos internacionales.",
+    title: "Especialistas ante la SIC en Colombia",
+    text: "Equipo de abogados expertos en propiedad industrial ante la Superintendencia de Industria y Comercio (SIC), con enfoque en empresas en Bogotá y todo el país.",
   },
   {
     number: 3,
-    title: "Garantía de Registro en Colombia",
-    text: "Si tu marca no es concedida ante la SIC, la solicitamos de nuevo sin costo adicional. Garantía por escrito para tu PYME.",
+    title: "Garantía en Registro de Marca en Colombia",
+    text: "Acompañamiento completo en el proceso de registro de marca ante la SIC en Colombia, brindando seguridad jurídica a empresas en Bogotá.",
   },
   {
     number: 4,
-    title: "Enfoque para la Empresa Colombiana",
-    text: "Adaptamos soluciones a las necesidades específicas de tu sector, potenciando el crecimiento de empresas y emprendedores colombianos.",
+    title: "Soluciones para Empresas en Bogotá y Colombia",
+    text: "Estrategias legales adaptadas al mercado colombiano para proteger marcas, patentes y activos intangibles de empresas y emprendimientos.",
   },
 ];
 
 export default function Experience() {
   return (
-    <section className={styles.section} id="experience">
+    <section
+      className={styles.section}
+      id="experience"
+      itemScope
+      itemType="https://schema.org/LegalService"
+    >
+      {/* SEO HIDDEN */}
+      <div style={{ display: "none" }}>
+        <h2 itemProp="name">
+          Abogados de marcas y patentes en Bogotá Colombia
+        </h2>
+        <p itemProp="description">
+          Firma legal en Bogotá especializada en registro de marcas y propiedad
+          intelectual en Colombia ante la SIC. Experiencia comprobada en el
+          mercado colombiano.
+        </p>
+        <span itemProp="areaServed">Bogotá, Colombia</span>
+      </div>
+
       <div className={styles.container}>
         <h2 className={styles.title}>
-          Experiencia que Marca la Diferencia: Tu Seguridad Jurídica en Colombia
+          Abogados Especialistas en Marcas y Patentes en Bogotá, Colombia
         </h2>
 
         <p className={styles.description}>
-          Más de un siglo de trayectoria y un equipo de élite respaldan cada
-          expediente que gestionamos desde Bogotá para todo el mercado nacional
-          y latinoamericano. Tu confianza es nuestra mayor responsabilidad.
+          Contamos con amplia experiencia en registro de marcas y propiedad
+          intelectual en Colombia. Desde Bogotá, asesoramos empresas y
+          emprendedores que buscan proteger sus activos ante la Superintendencia
+          de Industria y Comercio (SIC) y fortalecer su seguridad jurídica en el
+          mercado colombiano.
         </p>
 
-        <div className={styles.grid}>
+        <div
+          className={styles.grid}
+          itemProp="hasOfferCatalog"
+          itemScope
+          itemType="https://schema.org/OfferCatalog"
+        >
           {data.map((item) => (
-            <div key={item.number} className={styles.card}>
+            <div
+              key={item.number}
+              className={styles.card}
+              itemScope
+              itemType="https://schema.org/Offer"
+            >
               <div className={styles.line}></div>
 
               <div className={styles.circle}>{item.number}</div>
 
-              <h3>{item.title}</h3>
+              <h3 itemProp="name">{item.title}</h3>
 
-              <p>{item.text}</p>
+              <p itemProp="description">{item.text}</p>
             </div>
           ))}
         </div>
