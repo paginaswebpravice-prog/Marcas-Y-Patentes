@@ -11,7 +11,7 @@
 
 .topbar {
   background: linear-gradient(135deg, #003d6b, #004a80);
-  color: white;
+  color: #ffffff;
   font-size: 14px;
 }
 
@@ -54,20 +54,20 @@
 /* ================= NAVBAR ================= */
 
 .navbar {
-  background: white;
+  background: #ffffff;
   height: 85px;
 
   display: flex;
   align-items: center;
 
-  border-bottom: 1px solid #eeeeee;
+  border-bottom: 1px solid rgba(0, 74, 128, 0.1);
 
   transition: all 0.3s ease;
 }
 
 .navbar.scrolled {
   height: 70px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 25px rgba(0, 74, 128, 0.1);
 }
 
 /* ================= CONTENEDOR ================= */
@@ -99,7 +99,9 @@
   list-style: none;
 }
 
-.links button {
+/* ================= NAV ITEMS (UNIFICADO) ================= */
+
+.navItem {
   background: none;
   border: none;
 
@@ -113,11 +115,14 @@
   position: relative;
 
   transition: color 0.3s ease;
+
+  text-decoration: none;
+  display: inline-block;
 }
 
-/* línea animada estilo premium */
+/* línea animada premium */
 
-.links button::after {
+.navItem::after {
   content: "";
   position: absolute;
 
@@ -132,11 +137,21 @@
   transition: width 0.3s;
 }
 
-.links button:hover {
+.navItem:hover {
   color: #004a80;
 }
 
-.links button:hover::after {
+.navItem:hover::after {
+  width: 100%;
+}
+
+/* ================= ACTIVE (opcional pero PRO) ================= */
+
+.active {
+  color: #004a80;
+}
+
+.active::after {
   width: 100%;
 }
 
@@ -152,7 +167,7 @@
   font-size: 14px;
   font-weight: 700;
 
-  color: #003d6b;
+  color: #004a80;
 
   border-radius: 6px;
 
@@ -203,7 +218,7 @@
     width: 75%;
     height: 100vh;
 
-    background: white;
+    background: #ffffff;
 
     flex-direction: column;
 
@@ -219,7 +234,7 @@
     right: 0;
   }
 
-  .links button {
+  .navItem {
     font-size: 18px;
   }
 

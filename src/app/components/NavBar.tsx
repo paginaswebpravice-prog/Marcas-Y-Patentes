@@ -144,7 +144,10 @@ export default function NavBar() {
           <ul className={`${styles.links} ${menuOpen ? styles.active : ""}`}>
             {sections.map((section) => (
               <li key={section.id}>
-                <button onClick={() => handleNavigation(section.id)}>
+                <button
+                  onClick={() => handleNavigation(section.id)}
+                  className={styles.navItem}
+                >
                   {section.name}
                 </button>
               </li>
@@ -152,7 +155,11 @@ export default function NavBar() {
 
             {/* BLOG COMO RUTA */}
             <li>
-              <Link href="/blog" onClick={() => setMenuOpen(false)}>
+              <Link
+                href="/blog"
+                className={styles.navItem}
+                onClick={() => setMenuOpen(false)}
+              >
                 Blog
               </Link>
             </li>
