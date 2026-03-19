@@ -1,7 +1,13 @@
 "use client";
 
-import Image from "next/image";
 import styles from "../styles/SuccessCases.module.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faTrademark,
+  faLightbulb,
+  faIndustry,
+} from "@fortawesome/free-solid-svg-icons";
+import { motion } from "framer-motion";
 
 export default function SuccessCases() {
   return (
@@ -23,84 +29,111 @@ export default function SuccessCases() {
       </div>
 
       <div className={styles.container}>
-        <h2 className={styles.title}>
+        {/* TITLE */}
+        <motion.h2
+          className={styles.title}
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
           Casos de Éxito en Registro de Marcas y Patentes en Bogotá, Colombia
-        </h2>
+        </motion.h2>
 
-        <p className={styles.description}>
+        {/* DESCRIPTION */}
+        <motion.p
+          className={styles.description}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: true }}
+        >
           Hemos acompañado a emprendedores, startups y empresas en Bogotá y toda
           Colombia en la protección legal de sus marcas, patentes y diseños
           industriales ante la Superintendencia de Industria y Comercio (SIC),
-          asegurando resultados sólidos en el mercado nacional.
-        </p>
+          logrando resultados sólidos y ventajas competitivas en el mercado
+          colombiano.
+        </motion.p>
 
         <div className={styles.grid}>
           {/* ITEM 1 */}
-          <div
+          <motion.div
             className={styles.card}
             itemScope
             itemType="https://schema.org/CreativeWork"
+            initial={{ opacity: 0, y: 60 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            viewport={{ once: true }}
+            whileHover={{ y: -8 }}
           >
-            <div className={styles.icon}>
-              <Image
-                src="/icons/marcas.jpg"
-                alt="Registro de marca en Bogotá Colombia"
-                width={60}
-                height={60}
-              />
-            </div>
+            <motion.div
+              className={styles.icon}
+              whileHover={{ scale: 1.15, rotate: 5 }}
+              transition={{ duration: 0.3 }}
+            >
+              <FontAwesomeIcon icon={faTrademark} />
+            </motion.div>
 
             <div>
               <h3 itemProp="name">Registro de Marcas Exitoso en Bogotá</h3>
 
               <p itemProp="description">
-                Asesoramos a empresas en Bogotá y Colombia en el registro de
+                Acompañamos a empresas en Bogotá y Colombia en el registro de
                 marcas ante la SIC, logrando exclusividad legal y
-                posicionamiento competitivo en el mercado colombiano.
+                posicionamiento sólido en el mercado nacional.
               </p>
             </div>
-          </div>
+          </motion.div>
 
           {/* ITEM 2 */}
-          <div
+          <motion.div
             className={styles.card}
             itemScope
             itemType="https://schema.org/CreativeWork"
+            initial={{ opacity: 0, y: 60 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.25 }}
+            viewport={{ once: true }}
+            whileHover={{ y: -8 }}
           >
-            <div className={styles.icon}>
-              <Image
-                src="/icons/patentes.jpg"
-                alt="Registro de patentes en Colombia"
-                width={60}
-                height={60}
-              />
-            </div>
+            <motion.div
+              className={styles.icon}
+              whileHover={{ scale: 1.15, rotate: -5 }}
+              transition={{ duration: 0.3 }}
+            >
+              <FontAwesomeIcon icon={faLightbulb} />
+            </motion.div>
 
             <div>
               <h3 itemProp="name">Patentes Gestionadas en Colombia</h3>
 
               <p itemProp="description">
-                Protegemos innovaciones desde Bogotá mediante solicitudes de
-                patentes ante la SIC en Colombia, garantizando seguridad
-                jurídica para inventores y empresas tecnológicas.
+                Protegemos innovaciones tecnológicas desde Bogotá mediante
+                solicitudes de patentes ante la SIC en Colombia, garantizando
+                seguridad jurídica y ventaja competitiva.
               </p>
             </div>
-          </div>
+          </motion.div>
 
           {/* ITEM 3 */}
-          <div
+          <motion.div
             className={styles.card}
             itemScope
             itemType="https://schema.org/CreativeWork"
+            initial={{ opacity: 0, y: 60 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            viewport={{ once: true }}
+            whileHover={{ y: -8 }}
           >
-            <div className={styles.icon}>
-              <Image
-                src="/icons/disenos.jpg"
-                alt="Diseños industriales en Colombia"
-                width={60}
-                height={60}
-              />
-            </div>
+            <motion.div
+              className={styles.icon}
+              whileHover={{ scale: 1.15, rotate: 3 }}
+              transition={{ duration: 0.3 }}
+            >
+              <FontAwesomeIcon icon={faIndustry} />
+            </motion.div>
 
             <div>
               <h3 itemProp="name">
@@ -109,11 +142,11 @@ export default function SuccessCases() {
 
               <p itemProp="description">
                 Defendemos la identidad visual de productos en el mercado
-                colombiano, asegurando su registro y protección legal frente a
-                imitaciones.
+                colombiano, asegurando su registro ante la SIC y protección
+                frente a imitaciones.
               </p>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
