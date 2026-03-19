@@ -1,0 +1,158 @@
+.article {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 120px 20px;
+  background: #ffffff;
+}
+
+/* ================= HERO ================= */
+
+.hero h1 {
+  font-size: 38px;
+  color: #004a80;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.hero p {
+  font-size: 18px;
+  color: #000;
+  opacity: 0.85;
+  line-height: 1.7;
+  margin-bottom: 40px;
+}
+
+/* ================= CONTENT ================= */
+
+.content h2 {
+  font-size: 24px;
+  color: #004a80;
+  margin-top: 40px;
+  margin-bottom: 12px;
+
+  position: relative;
+}
+
+/* línea decorativa elegante */
+.content h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 40px;
+  height: 3px;
+  background: #f7c600;
+  border-radius: 2px;
+}
+
+.content p {
+  color: #000;
+  opacity: 0.8;
+  line-height: 1.7;
+}
+
+/* ================= CTA ================= */
+
+.cta {
+  margin-top: 60px;
+  padding: 40px;
+  border-radius: 16px;
+
+  background: linear-gradient(135deg, #004a80, #003a66);
+  color: #ffffff;
+
+  text-align: center;
+
+  box-shadow: 0 15px 40px rgba(0, 74, 128, 0.2);
+}
+
+.cta h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.cta p {
+  opacity: 0.9;
+}
+
+.cta button {
+  margin-top: 20px;
+  background: #f7c600;
+  color: #000;
+
+  border: none;
+  padding: 12px 28px;
+  border-radius: 8px;
+
+  cursor: pointer;
+  font-weight: 700;
+
+  transition: all 0.3s ease;
+}
+
+/* hover más premium */
+.cta button:hover {
+  background: #c4911a;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* ================= FAQ ================= */
+
+.faq {
+  margin-top: 70px;
+}
+
+.faq h2 {
+  color: #004a80;
+  margin-bottom: 25px;
+}
+
+/* cards FAQ estilo moderno */
+.faq > div {
+  padding: 20px;
+  border-radius: 12px;
+
+  background: #ffffff;
+
+  border: 1px solid rgba(0, 74, 128, 0.15);
+
+  margin-bottom: 15px;
+
+  transition: all 0.3s ease;
+}
+
+.faq > div:hover {
+  border-color: #004a80;
+  box-shadow: 0 8px 20px rgba(0, 74, 128, 0.1);
+}
+
+/* pregunta */
+.faq h3 {
+  color: #000;
+  font-size: 18px;
+}
+
+/* respuesta */
+.faq p {
+  color: #000;
+  opacity: 0.75;
+  margin-top: 6px;
+  line-height: 1.6;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .content h2 {
+    font-size: 20px;
+  }
+
+  .cta {
+    padding: 25px;
+  }
+}
