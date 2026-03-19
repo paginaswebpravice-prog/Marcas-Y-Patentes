@@ -78,10 +78,11 @@ export default function WhyChooseUs() {
           {/* IMAGEN */}
           <div className={styles.imageWrapper}>
             <Image
-              src="/images/why-choose-us.jpg"
+              src="/ideaImage.jpg"
               alt="Abogados de propiedad intelectual en Bogotá Colombia"
-              width={500}
-              height={400}
+              fill
+              className={styles.image}
+              priority
             />
           </div>
         </div>
