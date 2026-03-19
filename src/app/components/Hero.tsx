@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import styles from "../styles/Hero.module.css";
+import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
@@ -11,7 +12,7 @@ export default function Hero() {
       itemScope
       itemType="https://schema.org/LegalService"
     >
-      {/* SEO HIDDEN (IA + GOOGLE) */}
+      {/* SEO HIDDEN */}
       <div style={{ display: "none" }}>
         <h2 itemProp="name">
           Abogados de marcas y patentes en Colombia y Bogotá
@@ -27,37 +28,61 @@ export default function Hero() {
 
       {/* LEFT CONTENT */}
       <div className={styles.content}>
-        <h1>
+        <motion.h1
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+        >
           Registro de Marcas y Patentes en Colombia:
           <br />
           Abogados Especialistas en Bogotá
-        </h1>
+        </motion.h1>
 
-        <p>
+        <motion.p
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.2 }}
+        >
           Protegemos tu marca, logo o invención en Colombia con asesoría legal
           especializada ante la Superintendencia de Industria y Comercio (SIC).
           Acompañamos a empresas en Bogotá y todo el país en el registro de
           marcas, patentes y propiedad intelectual, asegurando la protección
           legal de tus activos y el crecimiento de tu negocio.
-        </p>
+        </motion.p>
 
-        <div className={styles.buttons}>
-          <button className={styles.primary}>
+        <motion.div
+          className={styles.buttons}
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.4 }}
+        >
+          <motion.button
+            className={styles.primary}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.97 }}
+          >
             Asesoría en Marcas y Patentes
-          </button>
+          </motion.button>
 
-          <button className={styles.secondary}>
+          <motion.button
+            className={styles.secondary}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.97 }}
+          >
             Servicios de Propiedad Intelectual
-          </button>
-        </div>
+          </motion.button>
+        </motion.div>
       </div>
 
       {/* RIGHT IMAGE */}
-      <div
+      <motion.div
         className={styles.imageContainer}
         itemProp="image"
         itemScope
         itemType="https://schema.org/ImageObject"
+        initial={{ opacity: 0, scale: 1.1 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1 }}
       >
         <Image
           src="/marcas&patentes.jpg"
@@ -66,7 +91,7 @@ export default function Hero() {
           priority
           className={styles.image}
         />
-      </div>
+      </motion.div>
     </section>
   );
 }

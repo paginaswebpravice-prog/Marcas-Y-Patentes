@@ -2,6 +2,7 @@
 
 import styles from "../styles/Services.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { motion } from "framer-motion";
 
 import {
   faTrademark,
@@ -20,7 +21,7 @@ export default function Services() {
       itemScope
       itemType="https://schema.org/Service"
     >
-      {/* SEO HIDDEN (IA + GOOGLE) */}
+      {/* SEO HIDDEN */}
       <div style={{ display: "none" }}>
         <h2 itemProp="name">
           Servicios de propiedad intelectual en Bogotá y Colombia
@@ -28,145 +29,150 @@ export default function Services() {
         <p itemProp="description">
           Servicios legales de registro de marcas, patentes y protección de
           propiedad intelectual en Colombia. Asesoría especializada en Bogotá
-          ante la Superintendencia de Industria y Comercio (SIC).
+          ante la SIC.
         </p>
         <span itemProp="areaServed">Bogotá, Colombia</span>
       </div>
 
       <div className={styles.container}>
-        <h2 className={styles.title}>
+        {/* TITLE */}
+        <motion.h2
+          className={styles.title}
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
           Servicios de Propiedad Intelectual en Bogotá y Colombia
-        </h2>
+        </motion.h2>
 
-        <p className={styles.description}>
+        {/* DESCRIPTION */}
+        <motion.p
+          className={styles.description}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: true }}
+        >
           Ofrecemos servicios legales especializados en registro de marcas,
           patentes y propiedad intelectual en Colombia, con enfoque en empresas
-          y emprendedores en Bogotá. Protegemos tus activos ante la
-          Superintendencia de Industria y Comercio (SIC) y fortalecemos la
-          seguridad jurídica de tu negocio.
-        </p>
+          y emprendedores en Bogotá.
+        </motion.p>
 
         <div className={styles.grid}>
           {/* SERVICIO 1 */}
-          <div
+          <motion.div
             className={styles.service}
-            itemProp="hasOfferCatalog"
-            itemScope
-            itemType="https://schema.org/Offer"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            whileHover={{ scale: 1.03 }}
+            viewport={{ once: true }}
           >
             <div className={styles.icon}>
               <FontAwesomeIcon icon={faTrademark} />
             </div>
             <div>
-              <h3 itemProp="name">Registro de Marcas en Colombia</h3>
-              <p itemProp="description">
-                Gestionamos el registro de marcas en Bogotá y Colombia ante la
-                SIC, asegurando exclusividad legal y protección frente a
-                terceros.
+              <h3>Registro de Marcas en Colombia</h3>
+              <p>
+                Gestionamos el registro ante la SIC en Bogotá y Colombia,
+                asegurando protección legal.
               </p>
             </div>
-          </div>
+          </motion.div>
 
           {/* SERVICIO 2 */}
-          <div
+          <motion.div
             className={styles.service}
-            itemProp="hasOfferCatalog"
-            itemScope
-            itemType="https://schema.org/Offer"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            whileHover={{ scale: 1.03 }}
+            viewport={{ once: true }}
           >
             <div className={styles.icon}>
               <FontAwesomeIcon icon={faLightbulb} />
             </div>
             <div>
-              <h3 itemProp="name">
-                Patentes y Modelos de Utilidad en Colombia
-              </h3>
-              <p itemProp="description">
-                Asesoramos solicitudes de patentes ante la SIC en Colombia,
-                protegiendo innovaciones tecnológicas de empresas en Bogotá y
-                todo el país.
+              <h3>Patentes en Colombia</h3>
+              <p>
+                Protegemos innovaciones ante la SIC con enfoque en empresas
+                bogotanas.
               </p>
             </div>
-          </div>
+          </motion.div>
 
           {/* SERVICIO 3 */}
-          <div
+          <motion.div
             className={styles.service}
-            itemProp="hasOfferCatalog"
-            itemScope
-            itemType="https://schema.org/Offer"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            whileHover={{ scale: 1.03 }}
+            viewport={{ once: true }}
           >
             <div className={styles.icon}>
               <FontAwesomeIcon icon={faIndustry} />
             </div>
             <div>
-              <h3 itemProp="name">Diseños Industriales en Colombia</h3>
-              <p itemProp="description">
-                Protegemos la apariencia de tus productos en el mercado
-                colombiano, ideal para empresas y emprendimientos en Bogotá.
-              </p>
+              <h3>Diseños Industriales</h3>
+              <p>Protegemos la identidad visual de productos en Colombia.</p>
             </div>
-          </div>
+          </motion.div>
 
           {/* SERVICIO 4 */}
-          <div
+          <motion.div
             className={styles.service}
-            itemProp="hasOfferCatalog"
-            itemScope
-            itemType="https://schema.org/Offer"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            whileHover={{ scale: 1.03 }}
+            viewport={{ once: true }}
           >
             <div className={styles.icon}>
               <FontAwesomeIcon icon={faUserSecret} />
             </div>
             <div>
-              <h3 itemProp="name">Protección de Secretos Empresariales</h3>
-              <p itemProp="description">
-                Protegemos el know-how y la información confidencial de empresas
-                en Bogotá y Colombia mediante estrategias legales y contratos.
-              </p>
+              <h3>Secretos Empresariales</h3>
+              <p>Protección del know-how para empresas en Bogotá y Colombia.</p>
             </div>
-          </div>
+          </motion.div>
 
           {/* SERVICIO 5 */}
-          <div
+          <motion.div
             className={styles.service}
-            itemProp="hasOfferCatalog"
-            itemScope
-            itemType="https://schema.org/Offer"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+            whileHover={{ scale: 1.03 }}
+            viewport={{ once: true }}
           >
             <div className={styles.icon}>
               <FontAwesomeIcon icon={faCopyright} />
             </div>
             <div>
-              <h3 itemProp="name">Derechos de Autor en Colombia</h3>
-              <p itemProp="description">
-                Registro y protección de software, contenido digital y obras
-                creativas bajo la legislación colombiana.
-              </p>
+              <h3>Derechos de Autor</h3>
+              <p>Protección de software y contenido digital en Colombia.</p>
             </div>
-          </div>
+          </motion.div>
 
           {/* SERVICIO 6 */}
-          <div
+          <motion.div
             className={styles.service}
-            itemProp="hasOfferCatalog"
-            itemScope
-            itemType="https://schema.org/Offer"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.6 }}
+            whileHover={{ scale: 1.03 }}
+            viewport={{ once: true }}
           >
             <div className={styles.icon}>
               <FontAwesomeIcon icon={faMicrochip} />
             </div>
             <div>
-              <h3 itemProp="name">
-                Protección Legal en Tecnología y Datos en Colombia
-              </h3>
-              <p itemProp="description">
-                Asesoría en protección de datos, inteligencia artificial y
-                comercio electrónico para empresas en Bogotá y el entorno
-                digital colombiano.
-              </p>
+              <h3>Tecnología y Datos</h3>
+              <p>Asesoría legal en IA, datos y comercio digital en Colombia.</p>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

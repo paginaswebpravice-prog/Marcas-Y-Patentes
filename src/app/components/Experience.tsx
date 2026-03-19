@@ -1,6 +1,7 @@
 "use client";
 
 import styles from "../styles/Experience.module.css";
+import { motion } from "framer-motion";
 
 const data = [
   {
@@ -47,30 +48,56 @@ export default function Experience() {
       </div>
 
       <div className={styles.container}>
-        <h2 className={styles.title}>
+        {/* TITLE */}
+        <motion.h2
+          className={styles.title}
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
           Abogados Especialistas en Marcas y Patentes en Bogotá, Colombia
-        </h2>
+        </motion.h2>
 
-        <p className={styles.description}>
+        {/* DESCRIPTION */}
+        <motion.p
+          className={styles.description}
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: true }}
+        >
           Contamos con amplia experiencia en registro de marcas y propiedad
           intelectual en Colombia. Desde Bogotá, asesoramos empresas y
           emprendedores que buscan proteger sus activos ante la Superintendencia
           de Industria y Comercio (SIC) y fortalecer su seguridad jurídica en el
           mercado colombiano.
-        </p>
+        </motion.p>
 
+        {/* GRID */}
         <div
           className={styles.grid}
           itemProp="hasOfferCatalog"
           itemScope
           itemType="https://schema.org/OfferCatalog"
         >
-          {data.map((item) => (
-            <div
+          {data.map((item, index) => (
+            <motion.div
               key={item.number}
               className={styles.card}
               itemScope
               itemType="https://schema.org/Offer"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.5,
+                delay: index * 0.15,
+              }}
+              viewport={{ once: true }}
+              whileHover={{
+                y: -8,
+                scale: 1.02,
+              }}
             >
               <div className={styles.line}></div>
 
@@ -79,7 +106,7 @@ export default function Experience() {
               <h3 itemProp="name">{item.title}</h3>
 
               <p itemProp="description">{item.text}</p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

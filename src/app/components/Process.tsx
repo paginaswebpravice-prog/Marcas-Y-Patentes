@@ -1,6 +1,7 @@
 "use client";
 
 import styles from "../styles/Process.module.css";
+import { motion } from "framer-motion";
 
 const steps = [
   {
@@ -46,31 +47,72 @@ export default function Process() {
       </div>
 
       <div className={styles.container}>
-        <h2 className={styles.title}>
+        {/* TITLE */}
+        <motion.h2
+          className={styles.title}
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
           Cómo Registrar una Marca en Bogotá y Colombia Paso a Paso
-        </h2>
+        </motion.h2>
 
-        <p className={styles.description}>
+        {/* DESCRIPTION */}
+        <motion.p
+          className={styles.description}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: true }}
+        >
           Te acompañamos en todo el proceso de registro de marca en Colombia
           desde Bogotá, garantizando un trámite claro, seguro y alineado con los
           requisitos de la Superintendencia de Industria y Comercio (SIC).
-        </p>
+        </motion.p>
 
+        {/* STEPS */}
         <div className={styles.grid}>
-          {steps.map((step) => (
-            <div
+          {steps.map((step, index) => (
+            <motion.div
               key={step.number}
               className={styles.step}
               itemProp="step"
               itemScope
               itemType="https://schema.org/HowToStep"
+              initial={{ opacity: 0, y: 60 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.5,
+                delay: index * 0.15, // efecto escalonado
+              }}
+              viewport={{ once: true }}
+              whileHover={{
+                y: -8,
+                scale: 1.03,
+                transition: { duration: 0.2 },
+              }}
             >
-              <div className={styles.arrow}>{step.number}</div>
+              {/* NUMBER */}
+              <motion.div
+                className={styles.arrow}
+                initial={{ scale: 0.8, opacity: 0 }}
+                whileInView={{ scale: 1, opacity: 1 }}
+                transition={{
+                  duration: 0.4,
+                  delay: index * 0.2,
+                }}
+                viewport={{ once: true }}
+              >
+                {step.number}
+              </motion.div>
 
+              {/* TITLE */}
               <h3 itemProp="name">{step.title}</h3>
 
+              {/* TEXT */}
               <p itemProp="text">{step.text}</p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
