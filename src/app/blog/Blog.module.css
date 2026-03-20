@@ -1,11 +1,14 @@
 .section {
   padding: 140px 20px;
   background: linear-gradient(to bottom, #ffffff, #f9fbfd);
+
+  overflow: hidden; /* 🔥 evita desbordes por animaciones */
 }
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
+  width: 100%;
 }
 
 /* ================= HEADER ================= */
@@ -61,14 +64,24 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
+  gap: 24px;
+
+  width: 100%;
+}
+
+/* 🔥 IMPORTANTE PARA MOTION */
+.grid > * {
+  width: 100%;
 }
 
 /* ================= CARD ================= */
 
 .card {
+  display: block; /* 🔥 evita que motion lo rompa */
+  width: 100%;
+
   background: #ffffff;
-  padding: 20px;
+  padding: 22px;
   border-radius: 16px;
   text-decoration: none;
   color: inherit;
@@ -76,6 +89,8 @@
   border: 1px solid rgba(0, 74, 128, 0.15);
 
   transition: all 0.3s ease;
+
+  position: relative;
 }
 
 .card::before {
@@ -106,11 +121,14 @@
   opacity: 0.8;
 }
 
+/* ================= CTA LINK ================= */
+
 .readMore {
   display: inline-block;
   margin-top: 15px;
   font-weight: 600;
   color: #c4911a;
+  transition: 0.3s;
 }
 
 .readMore:hover {
@@ -121,12 +139,16 @@
 
 .faq {
   margin-top: 80px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .faqTitle {
   font-size: 28px;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   color: #004a80;
+  text-align: center;
 }
 
 .faqItem {
@@ -136,6 +158,8 @@
   background: #ffffff;
   border: 1px solid rgba(0, 74, 128, 0.15);
   transition: 0.3s;
+
+  width: 100%;
 }
 
 .faqItem:hover {
@@ -153,4 +177,16 @@
   font-size: 14px;
   color: #000;
   opacity: 0.85;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 28px;
+  }
+
+  .section {
+    padding: 100px 20px;
+  }
 }

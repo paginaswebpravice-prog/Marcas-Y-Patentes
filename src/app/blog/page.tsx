@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { motion } from "framer-motion";
 import styles from "./Blog.module.css";
 
 const articles = [
@@ -80,48 +81,38 @@ const faqs = [
   {
     question: "¿Cuánto cuesta registrar una marca en Colombia?",
     answer:
-      "El costo depende de las tasas oficiales de la SIC y del tipo de marca. En Colombia, registrar una marca implica tarifas base y posibles costos adicionales.",
+      "El costo depende de las tasas oficiales de la SIC y del tipo de marca.",
   },
   {
     question: "¿Cuánto tiempo tarda registrar una marca en Colombia?",
-    answer:
-      "El proceso ante la SIC en Colombia puede tardar entre 6 y 12 meses, dependiendo de oposiciones y revisiones.",
+    answer: "El proceso puede tardar entre 6 y 12 meses dependiendo del caso.",
   },
   {
     question: "¿Es obligatorio registrar una marca en Colombia?",
     answer:
-      "No es obligatorio, pero sí altamente recomendable para proteger tu marca en Bogotá y todo el país.",
+      "No es obligatorio, pero sí altamente recomendable para proteger tu marca.",
   },
   {
-    question: "¿Qué pasa si otra empresa usa mi marca en Colombia?",
+    question: "¿Qué pasa si otra empresa usa mi marca?",
     answer:
-      "Si tu marca está registrada ante la SIC, puedes iniciar acciones legales para defender tus derechos.",
+      "Si está registrada, puedes iniciar acciones legales para defenderla.",
   },
 ];
 
 export default function BlogSection() {
   return (
-    <section
-      className={styles.section}
-      itemScope
-      itemType="https://schema.org/Blog"
-    >
-      {/* SEO */}
-      <div style={{ display: "none" }}>
-        <h2 itemProp="name">
-          Blog sobre registro de marcas en Bogotá Colombia
-        </h2>
-        <p itemProp="description">
-          Artículos sobre registro de marcas, patentes y propiedad intelectual
-          en Colombia enfocados en empresas y emprendedores en Bogotá.
-        </p>
-      </div>
-
+    <section className={styles.section}>
       <div className={styles.container}>
-        {/* HEADER PREMIUM */}
-        <div className={styles.header}>
+        {/* HEADER */}
+        <motion.div
+          className={styles.header}
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          viewport={{ once: true }}
+        >
           <span className={styles.badge}>
-            Blog Legal en Bogotá • Propiedad Intelectual en Colombia
+            Blog Legal en Bogotá • Propiedad Intelectual
           </span>
 
           <h2 className={styles.title}>
@@ -131,61 +122,63 @@ export default function BlogSection() {
           <div className={styles.divider}></div>
 
           <p className={styles.description}>
-            Accede a guías prácticas y actualizadas sobre registro de marcas y
-            propiedad intelectual en Colombia. Aprende desde Bogotá cómo
-            proteger tu marca ante la SIC, evitar errores comunes y tomar
-            decisiones estratégicas para crecer en el mercado colombiano.
+            Accede a guías prácticas y estrategias reales para proteger tu marca
+            en Colombia. Aprende cómo evitar errores y tomar decisiones legales
+            inteligentes desde Bogotá.
           </p>
-        </div>
+        </motion.div>
 
         {/* GRID */}
         <div className={styles.grid}>
-          {articles.map((article) => (
-            <Link
+          {articles.map((article, index) => (
+            <motion.div
               key={article.id}
-              href={`/blog/${article.slug}`}
-              className={styles.card}
-              itemProp="blogPost"
-              itemScope
-              itemType="https://schema.org/BlogPosting"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{
+                duration: 0.5,
+                delay: index * 0.08, // efecto escalonado
+              }}
+              viewport={{ once: true }}
             >
-              <h3 itemProp="headline">{article.title}</h3>
-              <p itemProp="description">{article.excerpt}</p>
-              <span className={styles.readMore}>Leer más →</span>
-            </Link>
+              <Link href={`/blog/${article.slug}`} className={styles.card}>
+                <h3>{article.title}</h3>
+                <p>{article.excerpt}</p>
+                <span className={styles.readMore}>Leer más →</span>
+              </Link>
+            </motion.div>
           ))}
         </div>
 
         {/* FAQ */}
-        <div
+        <motion.div
           className={styles.faq}
-          itemScope
-          itemType="https://schema.org/FAQPage"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.2 }}
+          viewport={{ once: true }}
         >
           <h2 className={styles.faqTitle}>
             Preguntas Frecuentes sobre Marcas en Colombia
           </h2>
 
           {faqs.map((faq, index) => (
-            <div
+            <motion.div
               key={index}
               className={styles.faqItem}
-              itemScope
-              itemProp="mainEntity"
-              itemType="https://schema.org/Question"
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{
+                duration: 0.4,
+                delay: index * 0.1,
+              }}
+              viewport={{ once: true }}
             >
-              <h3 itemProp="name">{faq.question}</h3>
-
-              <p
-                itemScope
-                itemProp="acceptedAnswer"
-                itemType="https://schema.org/Answer"
-              >
-                <span itemProp="text">{faq.answer}</span>
-              </p>
-            </div>
+              <h3>{faq.question}</h3>
+              <p>{faq.answer}</p>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
