@@ -33,7 +33,11 @@ export const metadata: Metadata = {
   authors: [{ name: "Pravice Abogados" }],
   creator: "Pravice Abogados",
 
-  metadataBase: new URL("https://marcasypatentespravice.com"),
+  metadataBase: new URL("https://marcas-y-patentes.vercel.app/"),
+
+  verification: {
+    google: "Sjvr4v7EGRfdGd1hqq8XTBMdqvhfUlmZSvvsfo5lKmo",
+  },
 
   openGraph: {
     title: "Abogados en Marcas y Patentes en Colombia | Pravice",
