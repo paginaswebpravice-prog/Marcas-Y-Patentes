@@ -1,0 +1,315 @@
+/* ================= WRAPPER ================= */
+
+.articleWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  padding: 140px 20px 80px; /* espacio para navbar fijo */
+
+  background: linear-gradient(to bottom, #f8fafc, #ffffff);
+}
+
+.articleBlock {
+  max-width: 900px;
+  width: 100%;
+}
+
+/* ================= CARD PRINCIPAL ================= */
+
+.card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 40px;
+
+  box-shadow: 0 15px 40px rgba(0, 74, 128, 0.08);
+
+  border: 1px solid rgba(0, 74, 128, 0.05);
+}
+
+/* ================= TITLES ================= */
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+
+  margin-bottom: 20px;
+
+  color: #004a80;
+}
+
+.subtitle {
+  font-size: 1.6rem;
+  font-weight: 700;
+
+  margin-top: 45px;
+  margin-bottom: 15px;
+
+  color: #0f172a;
+
+  position: relative;
+}
+
+/* línea decorativa */
+.subtitle::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+
+  width: 40px;
+  height: 3px;
+
+  background: #f7c600;
+  border-radius: 2px;
+}
+
+/* ================= TEXT ================= */
+
+.paragraph {
+  font-size: 1.08rem;
+  line-height: 1.75;
+
+  margin-bottom: 18px;
+
+  color: #334155;
+}
+
+/* ================= LIST ================= */
+
+.list {
+  margin: 20px 0;
+  padding-left: 20px;
+}
+
+.list li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+
+  color: #334155;
+
+  position: relative;
+}
+
+/* bullet personalizado */
+.list li::marker {
+  color: #f7c600;
+}
+
+/* ================= ORDERED LIST ================= */
+
+.orderedList {
+  margin: 20px 0;
+  padding-left: 20px;
+}
+
+.orderedList li {
+  margin-bottom: 12px;
+  line-height: 1.6;
+  color: #334155;
+}
+
+/* ================= NOTE ================= */
+
+.note {
+  background: #fff8d6;
+  border-left: 5px solid #f7c600;
+
+  padding: 18px;
+  margin: 25px 0;
+
+  border-radius: 8px;
+
+  color: #4a4a4a;
+  font-size: 0.95rem;
+}
+
+/* ================= CODE ================= */
+
+.pre {
+  background: #0f172a;
+  color: #e2e8f0;
+
+  padding: 20px;
+  border-radius: 10px;
+
+  overflow-x: auto;
+
+  font-size: 0.85rem;
+
+  margin: 25px 0;
+}
+
+/* ================= CTA ================= */
+
+.cta {
+  margin-top: 50px;
+
+  padding: 30px;
+
+  background: linear-gradient(135deg, #004a80, #003d6b);
+
+  border-radius: 14px;
+
+  color: #ffffff;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+/* glow decorativo */
+.cta::before {
+  content: "";
+  position: absolute;
+  top: -40px;
+  right: -40px;
+
+  width: 120px;
+  height: 120px;
+
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+}
+
+.ctaTitle {
+  display: block;
+
+  font-size: 1.4rem;
+  font-weight: 700;
+
+  margin-bottom: 12px;
+}
+
+.cta p {
+  color: #e2e8f0;
+}
+
+/* botón */
+.ctaButton {
+  display: inline-block;
+
+  margin-top: 15px;
+  padding: 14px 24px;
+
+  background: #f7c600;
+  color: #004a80;
+
+  font-weight: 700;
+
+  border-radius: 8px;
+
+  text-decoration: none;
+
+  transition: all 0.25s ease;
+}
+
+.ctaButton:hover {
+  background: #ffd83d;
+  transform: translateY(-2px);
+}
+
+/* ================= FAQ ================= */
+
+.faqWrapper {
+  margin-top: 30px;
+}
+
+.faqItem {
+  margin-bottom: 15px;
+
+  border-bottom: 1px solid #e2e8f0;
+
+  padding-bottom: 10px;
+}
+
+.faqItem summary {
+  cursor: pointer;
+
+  font-weight: 600;
+  color: #004a80;
+}
+
+.faqItem p {
+  margin-top: 8px;
+  color: #334155;
+}
+
+/* ================= GRID ================= */
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 20px;
+  margin-top: 25px;
+}
+
+.innerCard {
+  background: #f8fafc;
+
+  padding: 20px;
+  border-radius: 12px;
+
+  border: 1px solid rgba(0, 74, 128, 0.05);
+}
+
+.innerCard h4 {
+  margin-bottom: 10px;
+  color: #004a80;
+}
+
+/* ================= CATEGORY ================= */
+
+.categoryCard {
+  background: #f8fafc;
+
+  border-radius: 12px;
+  padding: 20px;
+
+  margin-top: 20px;
+
+  border: 1px solid rgba(0, 74, 128, 0.05);
+}
+
+.categoryCard h3 {
+  margin-bottom: 10px;
+  color: #004a80;
+}
+
+/* ================= DIVIDER ================= */
+
+.divider {
+  height: 1px;
+  background: #e2e8f0;
+  margin: 40px 0;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1.3rem;
+  }
+
+  .paragraph {
+    font-size: 1rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .articleWrapper {
+    padding: 120px 15px 60px;
+  }
+
+  .card {
+    padding: 25px;
+  }
+}

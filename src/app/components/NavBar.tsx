@@ -23,9 +23,57 @@ export default function NavBar() {
 
   const sections = [
     { name: "Inicio", id: "hero" },
-    { name: "Servicios", id: "services" },
     { name: "Proceso", id: "process" },
     { name: "Experiencia", id: "experience" },
+  ];
+
+  /* ================= DROPDOWNS ================= */
+
+  const serviciosLinks = [
+    { name: "Registro de marca", href: "/servicios/registro-marca-colombia" },
+    { name: "Registro de logo", href: "/servicios/registro-logo-colombia" },
+  ];
+
+  const industriaLinks = [
+    { name: "Restaurantes", href: "/industria/registro-marca-restaurantes" },
+    { name: "Ecommerce", href: "/industria/registro-marca-ecommerce" },
+  ];
+
+  const problemasLinks = [
+    {
+      name: "Como saber si una marca ya esta registrada",
+      href: "/problemas/como-saber-si-una-marca-ya-esta-registrada",
+    },
+    {
+      name: "Me negaron el registro de marca",
+      href: "/problemas/me-negaron-registro-marca",
+    },
+    {
+      name: "problemas por usar una marca sin registro",
+      href: "/problemas/problemas-por-usar-una-marca-sin-registro",
+    },
+    {
+      name: "Que pasa si uso una marca registrada",
+      href: "/problemas/que-pasa-si-uso-una-marca-registrada",
+    },
+  ];
+
+  const marcaLinks = [
+    { name: "Registro de marca", href: "/marca-patente/registro-marca" },
+    { name: "Registro de patente", href: "/marca-patente/registro-patente" },
+    { name: "Renovación de marca", href: "/marca-patente/renovacion-marca" },
+    {
+      name: "Renovacion de patente",
+      href: "/marca-patente/renovacion-patente",
+    },
+    {
+      name: "Marca VS nombre comercial",
+      href: "/marca-patente/marca-vs-nombre-comercial",
+    },
+    {
+      name: "Registrar marca o crear empresa",
+      href: "/marca-patente/registrar-marca-o-crear-empresa",
+    },
   ];
 
   /* ================= SCROLL NAVBAR ================= */
@@ -152,6 +200,54 @@ export default function NavBar() {
                 </button>
               </li>
             ))}
+
+            {/* ================= SERVICIOS ================= */}
+            <li className={styles.dropdown}>
+              <span className={styles.navItem}>Servicios</span>
+              <ul className={styles.dropdownMenu}>
+                {serviciosLinks.map((item) => (
+                  <li key={item.href}>
+                    <Link href={item.href}>{item.name}</Link>
+                  </li>
+                ))}
+              </ul>
+            </li>
+
+            {/* ================= PROBLEMAS ================= */}
+            <li className={styles.dropdown}>
+              <span className={styles.navItem}>Problemas</span>
+              <ul className={styles.dropdownMenu}>
+                {problemasLinks.map((item) => (
+                  <li key={item.href}>
+                    <Link href={item.href}>{item.name}</Link>
+                  </li>
+                ))}
+              </ul>
+            </li>
+
+            {/* ================= INDUSTRIA ================= */}
+            <li className={styles.dropdown}>
+              <span className={styles.navItem}>Industria</span>
+              <ul className={styles.dropdownMenu}>
+                {industriaLinks.map((item) => (
+                  <li key={item.href}>
+                    <Link href={item.href}>{item.name}</Link>
+                  </li>
+                ))}
+              </ul>
+            </li>
+
+            {/* ================= MARCA / PATENTE ================= */}
+            <li className={styles.dropdown}>
+              <span className={styles.navItem}>Marca / Patente</span>
+              <ul className={styles.dropdownMenu}>
+                {marcaLinks.map((item) => (
+                  <li key={item.href}>
+                    <Link href={item.href}>{item.name}</Link>
+                  </li>
+                ))}
+              </ul>
+            </li>
 
             {/* BLOG COMO RUTA */}
             <li>
