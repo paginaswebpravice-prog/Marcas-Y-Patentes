@@ -12,7 +12,7 @@ export const metadata = {
   robots: "index, follow",
   alternates: {
     canonical:
-      "https://marcas-y-patentes.vercel.app/problemas/problemas-por-uso-marca-sin-registro",
+      "https://marcas-y-patentes.vercel.app/problemas/problemas-por-usar-una-marca-sin-registro",
   },
 
   openGraph: {
@@ -20,7 +20,7 @@ export const metadata = {
       "Problemas por usar una marca sin registro en Colombia | Riesgos legales",
     description:
       "Conoce los riesgos legales de usar una marca sin registro en Colombia y cómo protegerte ante la SIC.",
-    url: "https://marcas-y-patentes.vercel.app/problemas/problemas-por-uso-marca-sin-registro",
+    url: "https://marcas-y-patentes.vercel.app/problemas/problemas-por-usar-una-marca-sin-registro",
     type: "website",
   },
 
@@ -72,7 +72,7 @@ export default function ProblemasPorUsoMarcaSinRegistroSeo() {
       mainEntityOfPage: {
         "@type": "WebPage",
         "@id":
-          "https://marcas-y-patentes.vercel.app/problemas/problemas-por-uso-marca-sin-registro",
+          "https://marcas-y-patentes.vercel.app/problemas/problemas-por-usar-una-marca-sin-registro",
       },
     },
     {
