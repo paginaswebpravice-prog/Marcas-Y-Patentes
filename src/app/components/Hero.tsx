@@ -8,7 +8,6 @@ export default function Hero() {
   return (
     <section
       className={styles.hero}
-      id="hero"
       itemScope
       itemType="https://schema.org/LegalService"
     >
@@ -56,21 +55,25 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.4 }}
         >
-          <motion.button
+          <motion.a
+            href="https://api.whatsapp.com/send/?phone=573114659315&text&type=phone_number&app_absent=0"
+            target="_blank"
+            rel="noopener noreferrer"
             className={styles.primary}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.97 }}
           >
             Asesoría en Marcas y Patentes
-          </motion.button>
+          </motion.a>
 
-          <motion.button
+          <motion.a
+            href="/#services"
             className={styles.secondary}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.97 }}
           >
             Servicios de Propiedad Intelectual
-          </motion.button>
+          </motion.a>
         </motion.div>
       </div>
 

@@ -83,7 +83,14 @@ export default function Footer() {
               <li>→ Recibe asesoría inicial</li>
             </ul>
 
-            <button className={styles.button}>Enviar Consulta</button>
+            <a
+              className={styles.button}
+              href="https://api.whatsapp.com/send/?phone=573114659315&text&type=phone_number&app_absent=0"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Enviar Consulta
+            </a>
           </div>
         </div>
 
