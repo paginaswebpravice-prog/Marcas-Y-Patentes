@@ -101,22 +101,28 @@ export default function CallToAction() {
             transition={{ duration: 0.5, delay: 0.6 }}
             viewport={{ once: true }}
           >
-            <motion.button
+            <motion.a
               className={styles.primaryBtn}
               itemProp="name"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.97 }}
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://api.whatsapp.com/send/?phone=573114659315&text&type=phone_number&app_absent=0"
             >
               Solicitar Asesoría Gratuita en Bogotá
-            </motion.button>
+            </motion.a>
 
-            <motion.button
+            <motion.a
               className={styles.secondaryBtn}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.97 }}
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://api.whatsapp.com/send/?phone=573114659315&text&type=phone_number&app_absent=0"
             >
               Ver Servicios de Propiedad Intelectual
-            </motion.button>
+            </motion.a>
           </motion.div>
         </motion.div>
 

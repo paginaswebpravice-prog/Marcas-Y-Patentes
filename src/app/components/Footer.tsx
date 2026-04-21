@@ -40,24 +40,28 @@ export default function Footer() {
               <a
                 href="https://www.facebook.com/praviceabogadosespecializados"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <FontAwesomeIcon icon={faFacebook} />
               </a>
               <a
                 href="https://co.linkedin.com/company/praviceabogadosespecializados"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <FontAwesomeIcon icon={faLinkedinIn} />
               </a>
               <a
                 href="https://www.instagram.com/pravice_abogados/"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <FontAwesomeIcon icon={faInstagram} />
               </a>
               <a
-                href="https://api.whatsapp.com/message/RE7FEN4IGOISD1?autoload=1&app_absent=0"
+                href="https://api.whatsapp.com/send/?phone=573114659315&text&type=phone_number&app_absent=0"
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 <FontAwesomeIcon icon={faWhatsapp} />
               </a>
@@ -100,7 +104,7 @@ export default function Footer() {
         </div>
       </footer>
       <a
-        href="https://api.whatsapp.com/message/RE7FEN4IGOISD1?autoload=1&app_absent=0"
+        href="https://api.whatsapp.com/send/?phone=573114659315&text&type=phone_number&app_absent=0"
         target="_blank"
         rel="noopener noreferrer"
         className={styles.whatsappFloat}

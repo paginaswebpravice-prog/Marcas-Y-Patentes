@@ -118,8 +118,9 @@ export default function RegistroLogoColombiaContent() {
           </p>
 
           <a
-            href="https://api.whatsapp.com/send/?phone=573232904786"
+            href="https://api.whatsapp.com/send/?phone=573114659315&text&type=phone_number&app_absent=0"
             target="_blank"
+            rel="noopener noreferrer"
             className={styles.ctaButton}
           >
             Asesoría por WhatsApp
