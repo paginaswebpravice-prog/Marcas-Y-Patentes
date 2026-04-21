@@ -1,14 +1,14 @@
 .article {
-  max-width: 900px;
+  max-width: 950px;
   margin: 0 auto;
   padding: 120px 20px;
   background: #ffffff;
 }
 
-/* ================= HERO ================= */
+/* HERO */
 
 .hero h1 {
-  font-size: 38px;
+  font-size: 40px;
   color: #004a80;
   margin-bottom: 20px;
   line-height: 1.3;
@@ -16,151 +16,167 @@
 
 .hero p {
   font-size: 18px;
-  color: #000;
-  opacity: 0.85;
+  color: #222;
   line-height: 1.7;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
-/* ================= CONTENT ================= */
+/* CONTENT */
 
 .content {
   border-top: 1px solid rgba(0, 74, 128, 0.1);
-  padding-top: 30px;
+  padding-top: 40px;
 }
 
 .content h2 {
-  font-size: 24px;
+  font-size: 26px;
   color: #004a80;
-  margin-top: 40px;
-  margin-bottom: 12px;
-  position: relative;
+  margin-top: 50px;
+  margin-bottom: 15px;
   padding-left: 14px;
+  position: relative;
 }
 
-/* línea decorativa izquierda */
 .content h2::before {
   content: "";
   position: absolute;
   left: 0;
   top: 6px;
   width: 4px;
-  height: 20px;
+  height: 22px;
   background: #f7c600;
-  border-radius: 2px;
 }
 
 .content p {
-  color: #000;
-  opacity: 0.8;
-  line-height: 1.7;
-  margin-bottom: 12px;
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 15px;
+  color: #333;
 }
 
-/* ================= CTA ================= */
+.content ul {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.content li {
+  margin-bottom: 8px;
+}
+
+/* DESTACADO */
+
+.highlightBox {
+  background: #f5f9ff;
+  border-left: 4px solid #004a80;
+  padding: 15px;
+  margin-bottom: 25px;
+  border-radius: 6px;
+}
+
+/* CARDS */
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.card {
+  background: #f9fbff;
+  padding: 18px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 74, 128, 0.1);
+}
+
+.card h3 {
+  margin-bottom: 6px;
+  font-size: 16px;
+  color: #004a80;
+}
+
+/* STEPS */
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.steps div {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.steps span {
+  background: #004a80;
+  color: #fff;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.note {
+  background: #fff3cd;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+/* CTA */
 
 .cta {
   margin-top: 60px;
   padding: 35px;
   border-radius: 14px;
   background: linear-gradient(135deg, #004a80, #003a66);
-  color: #ffffff;
+  color: #fff;
   text-align: center;
-
-  box-shadow: 0 10px 30px rgba(0, 74, 128, 0.25);
 }
 
-.cta h3 {
-  font-size: 22px;
-  margin-bottom: 10px;
-}
-
-.cta p {
-  font-size: 15px;
-  opacity: 0.9;
-}
-
-.cta button {
-  margin-top: 18px;
+.ctaButton {
+  display: inline-block;
+  margin-top: 15px;
   background: #f7c600;
   color: #000;
-  border: none;
-  padding: 12px 28px;
+  padding: 12px 24px;
   border-radius: 8px;
-  cursor: pointer;
-  font-weight: 700;
-
-  transition: all 0.3s ease;
+  font-weight: bold;
+  text-decoration: none;
 }
 
-.cta button:hover {
-  background: #ffd83d;
-  transform: translateY(-2px);
-}
-
-/* ================= FAQ ================= */
+/* FAQ */
 
 .faq {
-  margin-top: 70px;
+  margin-top: 60px;
 }
 
 .faq h2 {
-  color: #004a80;
-  margin-bottom: 25px;
-  font-size: 26px;
-}
-
-/* ITEM FAQ */
-
-.faq div[itemtype="https://schema.org/Question"] {
   margin-bottom: 20px;
-  padding: 20px;
-  border-radius: 12px;
-
-  background: #ffffff;
-  border: 1px solid rgba(0, 74, 128, 0.15);
-
-  transition: all 0.3s ease;
 }
 
-.faq div[itemtype="https://schema.org/Question"]:hover {
-  border-color: #f7c600;
-  box-shadow: 0 8px 20px rgba(0, 74, 128, 0.08);
+.faq div {
+  padding: 15px;
+  border: 1px solid rgba(0, 74, 128, 0.1);
+  border-radius: 8px;
+  margin-bottom: 12px;
 }
 
-.faq h3 {
-  color: #000;
-  margin-bottom: 8px;
-  font-size: 18px;
-}
-
-.faq p {
-  color: #000;
-  opacity: 0.75;
-  font-size: 14px;
-  line-height: 1.6;
-}
-
-/* ================= RESPONSIVE ================= */
+/* RESPONSIVE */
 
 @media (max-width: 768px) {
   .hero h1 {
     font-size: 30px;
   }
 
-  .hero p {
-    font-size: 16px;
-  }
-
-  .content h2 {
-    font-size: 20px;
-  }
-
-  .cta {
-    padding: 25px;
-  }
-
-  .cta h3 {
-    font-size: 18px;
+  .cardGrid,
+  .steps {
+    grid-template-columns: 1fr;
   }
 }

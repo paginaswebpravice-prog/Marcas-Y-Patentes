@@ -1,73 +1,99 @@
 .article {
-  max-width: 900px;
+  max-width: 920px;
   margin: 0 auto;
   padding: 120px 20px;
   background: #ffffff;
 }
 
-/* ================= HERO ================= */
-
+/* HERO */
 .hero h1 {
-  font-size: 38px;
+  font-size: 40px;
   color: #004a80;
   margin-bottom: 20px;
-  line-height: 1.2;
+  line-height: 1.25;
 }
 
 .hero p {
   font-size: 18px;
   color: #000;
   opacity: 0.85;
-  line-height: 1.7;
-  margin-bottom: 40px;
+  line-height: 1.8;
+  margin-bottom: 20px;
 }
 
-/* ================= CONTENT ================= */
+/* CONTENT */
+.content {
+  margin-top: 30px;
+}
 
 .content h2 {
-  font-size: 24px;
+  font-size: 26px;
   color: #004a80;
-  margin-top: 40px;
-  margin-bottom: 12px;
-
+  margin-top: 50px;
+  margin-bottom: 15px;
   position: relative;
+  padding-left: 16px;
 }
 
-/* línea decorativa elegante */
 .content h2::before {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -6px;
-  width: 40px;
-  height: 3px;
+  top: 6px;
+  width: 5px;
+  height: 22px;
   background: #f7c600;
   border-radius: 2px;
 }
 
 .content p {
   color: #000;
-  opacity: 0.8;
-  line-height: 1.7;
+  opacity: 0.85;
+  line-height: 1.8;
+  margin-bottom: 14px;
 }
 
-/* ================= CTA ================= */
+.content ul {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
 
+.content li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+/* BOXES SEO */
+.highlightBox {
+  background: rgba(247, 198, 0, 0.1);
+  border-left: 4px solid #f7c600;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 25px 0;
+}
+
+.tipBox {
+  background: rgba(0, 74, 128, 0.08);
+  border-left: 4px solid #004a80;
+  padding: 12px;
+  border-radius: 8px;
+  margin: 20px 0;
+  font-size: 14px;
+}
+
+/* CTA */
 .cta {
-  margin-top: 60px;
+  margin-top: 70px;
   padding: 40px;
   border-radius: 16px;
-
   background: linear-gradient(135deg, #004a80, #003a66);
-  color: #ffffff;
-
+  color: #fff;
   text-align: center;
-
-  box-shadow: 0 15px 40px rgba(0, 74, 128, 0.2);
+  box-shadow: 0 15px 40px rgba(0, 74, 128, 0.25);
 }
 
 .cta h3 {
-  font-size: 22px;
+  font-size: 24px;
   margin-bottom: 10px;
 }
 
@@ -75,81 +101,63 @@
   opacity: 0.9;
 }
 
-.cta button {
+.ctaButton {
+  display: inline-block;
   margin-top: 20px;
   background: #f7c600;
   color: #000;
-
-  border: none;
   padding: 12px 28px;
   border-radius: 8px;
-
-  cursor: pointer;
   font-weight: 700;
-
+  text-decoration: none;
   transition: all 0.3s ease;
 }
 
-/* hover más premium */
-.cta button:hover {
-  background: #c4911a;
-  color: #ffffff;
+.ctaButton:hover {
+  background: #ffd83d;
   transform: translateY(-2px);
 }
 
-/* ================= FAQ ================= */
-
+/* FAQ */
 .faq {
-  margin-top: 70px;
+  margin-top: 80px;
 }
 
 .faq h2 {
   color: #004a80;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
 
-/* cards FAQ estilo moderno */
 .faq > div {
   padding: 20px;
   border-radius: 12px;
-
-  background: #ffffff;
-
   border: 1px solid rgba(0, 74, 128, 0.15);
-
   margin-bottom: 15px;
-
   transition: all 0.3s ease;
 }
 
 .faq > div:hover {
-  border-color: #004a80;
-  box-shadow: 0 8px 20px rgba(0, 74, 128, 0.1);
+  border-color: #f7c600;
+  box-shadow: 0 8px 20px rgba(0, 74, 128, 0.08);
 }
 
-/* pregunta */
 .faq h3 {
-  color: #000;
   font-size: 18px;
 }
 
-/* respuesta */
 .faq p {
-  color: #000;
   opacity: 0.75;
   margin-top: 6px;
-  line-height: 1.6;
 }
 
-/* ================= RESPONSIVE ================= */
-
+/* RESPONSIVE */
 @media (max-width: 768px) {
   .hero h1 {
-    font-size: 28px;
+    font-size: 30px;
   }
 
   .content h2 {
-    font-size: 20px;
+    font-size: 22px;
   }
 
   .cta {
