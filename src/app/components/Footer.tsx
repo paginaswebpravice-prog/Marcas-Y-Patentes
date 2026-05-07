@@ -110,6 +110,10 @@ export default function Footer() {
           </div>
         </div>
       </footer>
+      <div className={styles.whatsappTooltip}>
+        <span>¿Necesitas asesoría legal?</span>
+        <p>Habla ahora con un abogado por WhatsApp</p>
+      </div>
       <a
         href="https://api.whatsapp.com/send/?phone=573114659315&text&type=phone_number&app_absent=0"
         target="_blank"
